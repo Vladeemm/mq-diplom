@@ -567,7 +567,8 @@ aside {
 
 .products-box {
   position: relative;
-  width: 300px;
+  width: 318px;
+  height: 50%;
   outline: 3px solid #d3c59d;
   outline-offset: 1.31em;
   padding: 34px 0;
@@ -624,18 +625,6 @@ aside {
   font-size: 14px;
   color: #ffffff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .base-footer {
   display: flex;
