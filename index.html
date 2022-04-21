@@ -8,6 +8,47 @@
     <title>My Job</title>
 </head>
 <body>
+  <div class="popup">
+    <div class="popup__container">
+      <div class="your-feedback">
+        <header class="your-feedback-header">
+          <h2 class="your-feedback-title">Ваш фидбэк</h2> 
+          <div class="decorative-line"></div>
+        </header>
+        <div class="your-feedback-content">
+          <div class="form-group">
+            <label class="select-group">
+              <span class="select-label">Как часто вы заходите на сайт?</span>
+              <select class="select">
+                <option value="one" selected>Почти каждый день</option>
+                <option value="one-by-one">Через день</option>
+                <option value="NO">Иногда</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-group">
+            <span class="select-label">Вы подписаны на e-mail рассылку?</span>
+            <label class="radio-group">
+              <input type="radio" class="radio" name="radio-group" checked>
+              <span class="radio-text">Да</span>
+            </label>
+            <label class="radio-group">
+              <input type="radio" class="radio" name="radio-group">
+              <span class="radio-text">Нет</span>
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="field-group">
+              <span class="field-label">Расскажите какой контентвы хотели бы видеть на нашем сайте?</span>
+              <textarea class="field textarea" placeholder="Может, больше рецептов?" required></textarea>
+            </label>
+          </div>
+          <button class="popup-button-subscription">Отправить</button>
+        </div>
+        <button class="popup-close" type="button">Закрыть окно <a href="#"></a></button> 
+      </div>
+    </div>
+  </div>
     <header class="welcome-blog">
         <div class="conteiner">
          <div class="nav-conteiner">
@@ -343,11 +384,11 @@
 <footer class="base-footer">
   <address class="space-social-networks">
     <ul class="container-social-networks">
-      <li class="social-networks"><a href="#"><img src="svg/004-twitter.svg" style="width: 23px;" alt="Twitter"></a></li>
-      <li class="social-networks"><a href="#"><img src="svg/001-pinterest.svg" alt="Pinterest"></a></li>
-      <li class="social-networks"><a href="#"><img src="svg/002-facebook-logo.svg" style="width: 20px; heigth: 20px;" alt="Facebook"></a></li>
-      <li class="social-networks"><a href="#"><img src="svg/005-instagram.svg" alt="Instagram"></a></li>
-      <li class="social-networks"><a href="#"><img src="svg/003-tumblr.svg" alt="Tumblr"></a></li>
+      <li class="social-networks"><a href="#"><img src="svg/004-twitter.svg" class="svg-size" alt="Twitter"></a></li>
+      <li class="social-networks"><a href="#"><img src="svg/001-pinterest.svg" class="svg-size" alt="Pinterest"></a></li>
+      <li class="social-networks"><a href="#"><img src="svg/002-facebook-logo.svg" class="svg-size" alt="Facebook"></a></li>
+      <li class="social-networks"><a href="#"><img src="svg/005-instagram.svg" class="svg-size" alt="Instagram"></a></li>
+      <li class="social-networks"><a href="#"><img src="svg/003-tumblr.svg" class="svg-size" alt="Tumblr"></a></li>
     </ul>
   </address>
     <div class="copyright">
