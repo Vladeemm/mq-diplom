@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+}
+
 .popup {
   width: 100%;
   height: 100vh;
@@ -36,14 +40,12 @@
   text-align: center;
 }
 
-
 .your-feedback-header {
   font-size: 1rem;
-}
-
-.your-feedback-header {
   padding-top: 50px;
-} 
+  display: flex;
+  justify-content: center;
+}
 
 .your-feedback-content {
   padding: 0 30px;
@@ -97,7 +99,6 @@
  
 .radio:checked ~ .radio-text::before{
   background-image: url(../svg/form-circle.svg);
-  
 }
 
 .radio {
@@ -106,6 +107,7 @@
   height: 1px;
   width: 1px;
 }
+
 .field {
   display: block;
   width: 100%;
@@ -157,6 +159,11 @@
     background-image: url(../images/banner-bg.jpg);
   }
 
+  .nav-conteiner {
+    max-width: 1200px;
+    padding: 28px 15px 0 15px;
+  }
+
   .logo {
     width: 15%;
   }
@@ -167,7 +174,7 @@
   
   .now-trend {
     width: 34.16%;
-    height: 20vw;
+    height: 318px;
   }
 
   .now-trend:nth-child(n+2) {
@@ -220,6 +227,7 @@
   
   aside {
     min-width: 275px;
+    margin-left: 15px;
   }
 
   .name-conteiner {
@@ -264,7 +272,7 @@
     width: 66px;
     margin-bottom: 23px;
   }
-
+  
  .conteiner-tags {
     width: 277px;
   }
@@ -332,10 +340,8 @@
 
 @media (min-width: 641px) {
   .nav-conteiner {
-    padding-top: 2.25%;
     display: flex;
     justify-content: space-between;
-    width: 72.73%;
     margin-right: auto;
     margin-left: auto;
   }
@@ -370,6 +376,10 @@
   .new-container-data:nth-child(n+2) {
     margin-top: 9.04%;
   }
+
+  .line::after {
+   left: 60px;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 1200px) {
@@ -380,9 +390,12 @@
 
   .welcome-blog {
     min-width: 641px;
-    max-width:1200px;
     min-height: 392px;
     background-image: url(../images/banner-bg-tablet.jpg);
+  }
+
+  .nav-conteiner {
+    padding: 43px 35px 0 35px;
   }
   
   .logo {
@@ -407,11 +420,11 @@
   }
 
   .post-link {
-    font-size: 1.83vw;
+    font-size: 0.87rem;
   }
   
   .title-post-name {
-    font-size: 2.23vw;
+    font-size: 1.06rem;
     line-height: 1.29;
     padding-top: 17px;
   }
@@ -432,7 +445,7 @@
   .post-name {
     margin-top: 18px;
     margin-bottom: 41px;
-    font-size: 2.23vw;
+    font-size: 1.06rem;
   }
 
   .post-description {
@@ -440,7 +453,7 @@
   }  
 
   .date-of-publication  .author-publication {
-    font-size: 1.57vw;
+    font-size: 0.75rem;
   }
     
   .post-decorative-line {
@@ -458,28 +471,32 @@
 
   .product-offer {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .working-field {
     min-width: 641px;
-    padding-left: 4.6%;
-    padding-right: 4.6%;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   aside {
     width: 36.13%;
+    margin-left: 35px;
   }
 
   p {
-    font-size: 2.10vw;
+    font-size: 0.93rem;
   }
 
   .name-conteiner {
-    font-size: 1.83vw;
+    font-size: 0.87rem;
   }
 
   .new-post-name {
-    font-size: 1.83vw;
+    font-size: 0.87rem;
   }
 
   .small-picture-size {
@@ -487,7 +504,7 @@
   }
 
   .search-field {
-    width: 29.3vw;
+    width: 27.29vw;
     height: 48px;
   }
 
@@ -497,12 +514,12 @@
   }
 
   .address-field {
-    width: 35.47vw;
+    width: 32.24vw;
     height: 48px;
   }
 
   .button-subscription {
-    width: 35.47vw;
+    width: 32.24vw;
     height: 48px;
   }
 
@@ -517,15 +534,15 @@
   }
 
   .tag-tab {
-    font-size: 1.56vw;
+    font-size: 0.75rem;
   }
 
   .topic {
-    font-size: 1.83vw;
+    font-size: 0.87rem;
   }
 
   .degree {
-    font-size: 1.57vw;
+    font-size: 0.75rem;
     padding-left: 0.65vw;
   }
   
@@ -539,25 +556,25 @@
 
   .products-box {
     width: 37.66vw;
-    min-height: 34.82vw;
     padding: 4.46vw 0;
     outline-offset: 2.75vw;
+    height: 100%;
   }
 
   .product-name {
-    font-size: 2.62vw;
+    font-size: 1.06rem;
   }
 
   .product__price {
-    font-size: 2.62vw;
+    font-size: 1.25rem;
   }
   
   .product__price_old {
-    font-size: 1.83vw;
+    font-size: 0.87rem;
   }
 
   .product__button {
-    font-size: 1.83vw;
+    font-size: 0.87rem;
   }
 
   .space-social-networks {
@@ -593,7 +610,7 @@
   }
 
   .blog-name {
-    font-size: 7.3vw;
+    font-size: 1.62rem;
     margin-top: 70%;
   }
 
@@ -621,11 +638,11 @@
   }
 
   .post-link {
-    font-size: 3.88vw;
+    font-size: 0.87rem;
   }
 
   .title-post-name {
-    font-size: 4.44vw;
+    font-size: 1rem;
     line-height: 1.24;
   }
 
@@ -656,6 +673,10 @@
   .post-name {
     margin-top: 1.66%;
     margin-bottom: 4.16%;
+  }
+
+  .line::after {
+    left: 40px;
   }
 
   .post-description {
@@ -697,12 +718,23 @@
 
   .product-images {
     width: 79.16%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
   }
 
   .products-box {
     width: 79.16%;
     outline-offset: 6.11vw;
     padding-top: 6.66%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .products-body {
+    width: 91.66%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .space-social-networks {
@@ -748,6 +780,7 @@
   .menu-button:after {
     bottom: 0;
   }
+  
   .menu-button-label {
     width: 100%;
     height: 20%;
@@ -841,10 +874,29 @@ section {
   margin-left: auto;
 }
 
+.place-section-name{
+  display: flex;
+  justify-content: center;
+}
+
 .section-name {
   font-family: OpenSans-Bold;
   text-align: center;
   text-transform: uppercase;
+}
+
+.line {
+  position: relative;
+  display: inline-block; 
+}
+
+.line::after {
+  content: ""; 
+  position: absolute; 
+  background: #e1d9bd; 
+  width: 66px; 
+  height: 3px; 
+  bottom: -14px;
 }
 
 .decorative-line {
@@ -855,6 +907,7 @@ section {
 
 .section-body {
   display: flex;
+  margin-top: 42px;
 }
 
 .now-trend {
@@ -983,9 +1036,25 @@ p {
   font-family: OpenSans-Bold;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 10px;
   text-decoration: none;
   color: #0f0d0e;
+}
+
+.smoll-line {
+  position: relative;
+  display: inline-block; 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.smoll-line::after {
+  content: ""; 
+  position: absolute; 
+  background: #e1d9bd; 
+  width: 66px; 
+  height: 3px; 
+  bottom: -14px;
 }
 
 .new-post {
@@ -1013,6 +1082,10 @@ p {
 
 .new-post:nth-child(n+2) {
   margin-top: 15px;
+}
+
+.subscription-conteiner {
+  margin-top: 24px;
 }
 
 .search {
