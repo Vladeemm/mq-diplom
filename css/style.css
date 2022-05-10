@@ -5,7 +5,9 @@
 }
 
 body {
-  width: 100%;
+  width: 100vw;
+  min-width: 320px;
+  overflow-x: hidden;
 }
 
 .popup {
@@ -13,13 +15,22 @@ body {
   height: 100vh;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: rgba(0, 0, 0, 0.75);
   overflow-y: auto;
   position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   z-index: 20;
+}
+
+.popup::after {
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.6;
+  z-index: -1;
 }
 
 .popup__container {
@@ -38,6 +49,19 @@ body {
   margin-top: 0;
   margin-bottom: 0.35em;
   text-align: center;
+  text-transform: uppercase;
+  font-family: OpenSans-bold;
+  font-size: 1rem;
+}
+
+
+.popup-line::before {
+  content: ""; 
+  position: absolute; 
+  border-top: 3px solid #e1d9bd; 
+  width: 66px; 
+  margin-top: 32px;
+  margin-left: 25px;
 }
 
 .your-feedback-header {
@@ -48,7 +72,7 @@ body {
 }
 
 .your-feedback-content {
-  padding: 0 30px;
+  padding: 0 27px;
 }
 
 .select-label {
@@ -585,28 +609,41 @@ body {
 @media (max-width: 640px) {
   .popup__container {
     width: 91.66%;
+    min-width: 294px;
   }
 
   .welcome-blog {
     max-width: 640px;
     height: 177.77vw;
+    min-height: 630px;
     background-image: url(../images/banner-mobile.jpg);
   }
   
   .nav-conteiner {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
     padding-top: 8.8%;
     padding-right: 2.53%;
   }
 
   .logo {
     position: absolute;
-    width: 75vw;
+    width:100%;
     padding-top: 56.38%;
-    margin-right: 8.3%;
     z-index: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mq_mobile {
+    width: 75vw;
+    min-width: 240px;
+    max-width: 300px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
   }
 
   .blog-name {
@@ -631,6 +668,11 @@ body {
   .now-trend {
     width: 100%;
     height: 89.44vw;
+    min-height: 280px;
+  }
+
+  .box {
+    min-width: 280px;
   }
 
   .now-trend:nth-child(n+2) {
@@ -790,6 +832,21 @@ body {
     position: absolute;
     left: 0;
     top: 50%;
+  }
+}
+
+@media (min-width: 900px) and (orientation: landscape) {
+  .now-trend {
+    width: calc(25% - 3px);
+    min-height: 320px;
+  }
+
+  .now-trend:nth-child(n+3) {
+    margin-top: 0;
+  }
+
+  .now-trend:nth-child(3) {
+    margin-left: 3px;
   }
 }
 
