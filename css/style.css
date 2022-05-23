@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  width: 100vw;
-  min-width: 320px;
-  overflow-x: hidden;
-}
-
 .popup {
   width: 100%;
   height: 100vh;
@@ -21,16 +15,33 @@ body {
   z-index: 20;
 }
 
-.popup::after {
-  content: "";
-  background-color: #000000;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.6;
-  z-index: -1;
+@media (orientation: landscape) {
+  .popup::after {
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: -1;
+    height: 100vw;
+  }
+}
+
+@media (orientation: portrait) {
+  .popup::after {
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: -1;
+  }
 }
 
 .popup__container {
@@ -134,7 +145,8 @@ body {
 
 .field {
   display: block;
-  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   border: 2px solid #dadada;
   font-size: 1rem;
   padding: 20px;
@@ -434,14 +446,24 @@ body {
     flex-wrap: wrap;
   }
 
+   
+@media (orientation: landscape) {
+  .now-trend {
+    width: calc(25% - 3px);
+    min-height: 320px;
+  }
+
+  .now-trend:nth-child(3) {
+    margin-left: 3px;
+  }  
+}
+
+@media (orientation: portrait) {
   .now-trend {
     width: calc(50% - 2px);
     min-height: 320px;
   }
-
-  .now-trend:nth-child(n+3) {
-    margin-top: 4px;
-  }
+}
 
   .post-link {
     font-size: 0.87rem;
@@ -528,7 +550,7 @@ body {
   }
 
   .search-field {
-    width: 27.29vw;
+    width: 26vw;
     height: 48px;
   }
 
@@ -613,7 +635,7 @@ body {
   }
 
   .welcome-blog {
-    max-width: 640px;
+    min-width: 320px;
     height: 177.77vw;
     min-height: 630px;
     background-image: url(../images/banner-mobile.jpg);
@@ -631,6 +653,8 @@ body {
     z-index: 2;
     display: flex;
     justify-content: center;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 
   .mq_mobile {
@@ -643,7 +667,6 @@ body {
 
   nav {
     display: flex;
-    justify-content: flex-end;
   }
 
   .blog-name {
@@ -664,12 +687,24 @@ body {
   .section-body {
     flex-wrap: wrap;
   }
- 
+  
+@media (orientation: landscape) {
   .now-trend {
-    width: 100%;
+    width: 50%;
+    min-width: 320px;
     height: 89.44vw;
     min-height: 280px;
   }
+}
+
+@media (orientation: portrait) {
+  .now-trend {
+   width: 100%;
+    min-width: 320px;
+    height: 89.44vw;
+    min-height: 280px;
+  }
+}
 
   .box {
     min-width: 280px;
@@ -731,6 +766,10 @@ body {
     margin-right: 15px;
   }
 
+  .search-group {
+    width: 100%;
+}
+
   .search-field {
     width: 100%;
     height: 50px;
@@ -739,10 +778,6 @@ body {
   .button-search {
     width: 50px;
     height: 50px;
-  }
-
-  .search-group {
-    width: 91.66%;
   }
 
   .button-subscription {
@@ -781,6 +816,7 @@ body {
 
   .space-social-networks {
     width: 91.66%;
+    min-width: 320px;
   }
 }
 
@@ -833,20 +869,12 @@ body {
     left: 0;
     top: 50%;
   }
-}
 
-@media (min-width: 900px) and (orientation: landscape) {
-  .now-trend {
-    width: calc(25% - 3px);
-    min-height: 320px;
-  }
-
-  .now-trend:nth-child(n+3) {
-    margin-top: 0;
-  }
-
-  .now-trend:nth-child(3) {
-    margin-left: 3px;
+  .blog-name {
+    width: 76.94%;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -858,7 +886,6 @@ body {
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  flex-grow: 1;
 }
 
 .welcome-blog::after {
@@ -934,6 +961,7 @@ section {
 .place-section-name{
   display: flex;
   justify-content: center;
+  min-width: 320px;
 }
 
 .section-name {
@@ -1063,6 +1091,7 @@ section {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 61px;
+  min-width: 320px;
 }
 
 .post-name {
@@ -1153,7 +1182,7 @@ p {
 
 .search-field {
   border-style: none;
-  padding: 18px 155px 18px 18px;
+  padding: 18px 0px 18px 18px;
   margin: 0;
   display: inline-block;
   vertical-align: middle;
@@ -1181,9 +1210,11 @@ p {
   background-size: 18px;
   background-position: center center;
   cursor: pointer;
+  display: flex;
 }
 
 .description-search-icon {
+  display: none;
   width: 1px;
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1351,6 +1382,7 @@ p {
   flex-direction: column;
   margin-top: 63px;
   padding-bottom: 40px;
+  min-width: 320px;
 }
 
 .space-social-networks {
@@ -1388,6 +1420,7 @@ p {
   text-transform: capitalize;
   text-align: center;
   margin-top: 74px;
+  min-width: 320px;
 }
 
 .link {
