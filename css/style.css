@@ -4,19 +4,22 @@
   box-sizing: border-box;
 }
 
-.popup {
+.popup-background {
   width: 100%;
+  position: fixed;
+  height: 100%;
+  z-index: 11;
+}
+
+.popup {
   height: 100vh;
   padding-top: 50px;
   padding-bottom: 50px;
   overflow-y: auto;
-  position: fixed;
   display: flex;
-  z-index: 20;
-}
+} 
 
-@media (orientation: landscape) {
-  .popup::after {
+.popup::after {
     content: "";
     background-color: #000000;
     position: absolute;
@@ -26,22 +29,6 @@
     left: 0;
     opacity: 0.9;
     z-index: -1;
-    height: 100vw;
-  }
-}
-
-@media (orientation: portrait) {
-  .popup::after {
-    content: "";
-    background-color: #000000;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.9;
-    z-index: -1;
-  }
 }
 
 .popup__container {
