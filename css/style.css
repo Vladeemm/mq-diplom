@@ -184,7 +184,7 @@
 
   .nav-conteiner {
     max-width: 1200px;
-    padding: 28px 15px 0 15px;
+    padding: 28px 10px 0 25px;
   }
 
   .logo {
@@ -374,8 +374,8 @@
     z-index: 10;
   }
   .blog-name {
-    max-width: 650px;
-    margin-top: 112px;
+    max-width: 700px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -426,7 +426,7 @@
   }
 
   .blog-name {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .section-body {
@@ -895,7 +895,7 @@
 .site-navigation {
   list-style-type: none;
   display: block;
-  padding-top: 0.75%;
+  padding-top: 2%;
   display: flex;
   justify-content: flex-end;
 }
@@ -917,6 +917,10 @@
   z-index: 10;
 }
 
+.tab:hover {
+  text-decoration: underline;
+}
+
 @font-face {
   font-family: OpenSans-Regular; 
   font-weight: normal; 
@@ -928,11 +932,16 @@
   color: #ffffff;
   text-transform: uppercase;
   font-family: OpenSans-Bold;
-  line-height: 1.6;
+  line-height: 1.8;
   position: relative;
   z-index: 10;
   text-align: center;
   text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  letter-spacing: 3px;
 }
 
 @font-face {
@@ -1064,12 +1073,27 @@ section {
   color: #b59f5b;
   font-family: OpenSans-Bold;
   text-transform: uppercase;
-}  
+}
+
+.post-link:hover {
+  text-decoration: underline;
+}
 
 .title-post-name {
   font-family: OpenSans-Bold;
   color: #ffffff;
   text-transform: uppercase;
+  max-height: 6.5rem;
+  overflow: auto;
+  text-decoration: none;
+}
+
+.title-post-name::-webkit-scrollbar {
+  width: 10px;
+}
+
+.title-post-name:hover {
+  color: #BBB6A8
 }
 
   .working-field {
@@ -1201,6 +1225,10 @@ p {
   display: flex;
 }
 
+.button-search:hover {
+  background-color: #323232;
+}
+
 .description-search-icon {
   display: none;
   width: 1px;
@@ -1215,13 +1243,19 @@ p {
 }
 
 .address-field {
-  border-style: none;
+  box-sizing: border-box;
+  border: 1px solid transparent;
   padding: 18px;
   margin: 0;
   vertical-align: middle;
   font-size: 13px;
   font-family: OpenSans-Regular;
   background-color: #f4f7f6;
+  outline: none;
+}
+
+.address-field:focus {
+  border: 1px solid #B59F5B;
 }
 
 .address-input-field {
@@ -1244,6 +1278,10 @@ p {
   text-transform: uppercase;
   background-color: #b59f5b;
   cursor: pointer;
+}
+
+.button-subscription:hover {
+  background-color: #323232;
 }
 
 .navigation-tags {
@@ -1293,6 +1331,10 @@ p {
   font-family: OpenSans-Bold;
 }
 
+.topic:hover {
+  color: #B59F5B;
+}
+
 .topic:first-letter {
   text-transform: uppercase;
 }
@@ -1303,7 +1345,7 @@ p {
 }
 
 .section-footer, .trends {
-  margin-top: 64px;
+  margin-top: 55px;
 }
 
 .products-box {
@@ -1361,6 +1403,10 @@ p {
   font-family: OpenSans-Bold;
   color: #ffffff;
   cursor: pointer;
+}
+
+.product__button:hover {
+  background-color: #323232;
 }
 
 .base-footer {
